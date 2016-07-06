@@ -1,5 +1,8 @@
 package pl.mirco;
 
+import com.cs102.recipegenerator.domain.Fridge;
+import com.cs102.recipegenerator.domain.User;
+import com.cs102.recipegenerator.manager.UserManager;
 import java.awt.EventQueue;
 import java.util.List;
 
@@ -15,35 +18,23 @@ import pl.mirco.model.Person;
 
 public class Aplikacja {
 
-	private JFrame frame;
+    private JFrame frame;
 
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
+    /**
+     * Launch the application.
+     */
+    public static void main(String[] args) {
 
-		Configuration configuration = new Configuration();
-		configuration.configure();
+        Fridge fridge = new Fridge();
 
-		ServiceRegistry sr = new ServiceRegistryBuilder().applySettings(
-				configuration.getProperties()).buildServiceRegistry();
-		SessionFactory sf = configuration.buildSessionFactory(sr);
+        User user1 = new User();
+        user1.setUsername("Adam");
+        user1.setPassword("Kowaliski");
+        user1.setFridge(fridge);
 
-		Session ss = sf.openSession();
-		
-                	ss.beginTransaction();
-                        
-            List<Person> list = ss.createCriteria(Person.class).list();
-//		Person user1 = new Person();
-//		user1.setFirstName("Adam");
-//		user1.setLastName("Kowaliski");
+//		 saving objects to session
+        UserManager.saveUser(user1);
 
-	
-		// saving objects to session
-//		ss.save(user1);
-		// ss.save(user2);
-		ss.getTransaction().commit();
-		ss.close();
-
-		
-}}
+        System.out.print(UserManager.getAllUsers().get(9).getFridge().getId());
+    }
+}
