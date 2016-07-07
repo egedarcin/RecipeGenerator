@@ -23,7 +23,7 @@ import javax.persistence.OneToOne;
 public class Fridge {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     
     

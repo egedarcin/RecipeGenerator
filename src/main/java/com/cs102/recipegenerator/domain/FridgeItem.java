@@ -20,7 +20,7 @@ import javax.persistence.ManyToOne;
 public class FridgeItem implements Serializable {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
     private int amount;
@@ -34,6 +34,22 @@ public class FridgeItem implements Serializable {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public int getAmount() {
+        return amount;
+    }
+
+    public Ingredient getIngredient() {
+        return ingredient;
+    }
+
+    public void setAmount(int amount) {
+        this.amount = amount;
+    }
+
+    public void setIngredient(Ingredient ingredient) {
+        this.ingredient = ingredient;
     }
     
 }

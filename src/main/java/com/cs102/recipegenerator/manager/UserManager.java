@@ -15,7 +15,9 @@ import org.hibernate.service.ServiceRegistry;
 import org.hibernate.service.ServiceRegistryBuilder;
 
 /**
- *
+ * Amazon aws 
+ * email: ege.darcin@ug.bilkent.edu.tr
+ * sifre : rec1peServer
  * @author egedarcho
  */
 public class UserManager {

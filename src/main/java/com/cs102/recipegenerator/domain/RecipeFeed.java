@@ -21,7 +21,7 @@ import javax.persistence.ManyToOne;
 public class RecipeFeed implements Serializable {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
     @ManyToOne
@@ -36,7 +36,22 @@ public class RecipeFeed implements Serializable {
     public void setId(Long id) {
         this.id = id;
     }
-    
+
+    public User getUser() {
+        return user;
+    }
+
+    public Date getCookDate() {
+        return cookDate;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    public void setCookDate(Date cookDate) {
+        this.cookDate = cookDate;
+    }
     
     
 }

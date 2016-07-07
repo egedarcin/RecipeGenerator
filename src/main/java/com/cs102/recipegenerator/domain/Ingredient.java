@@ -18,10 +18,10 @@ import javax.persistence.Id;
 @Entity
 class Ingredient implements Serializable {
 
-    private final String IMAGE_URL = "http://s3url/";
+    private final String IMAGE_URL = "https://s3.eu-central-1.amazonaws.com/cs102recipegenerator/ingredients/";
     
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
     private String name;
@@ -36,6 +36,18 @@ class Ingredient implements Serializable {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public String getIMAGE_URL() {
+        return IMAGE_URL;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
     
 }
