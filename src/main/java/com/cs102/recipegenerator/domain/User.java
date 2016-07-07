@@ -18,7 +18,8 @@ import javax.persistence.Transient;
 
 /**
  *
- * @author egedarcho
+ * @author egedarcho, umutakos, senaxi, ttabar, cntysz
+ * 
  */
 @Entity
 public class User {
