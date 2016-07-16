@@ -10,5 +10,6 @@ package com.cs102.recipegenerator.GUI;
  * @author egedarcho
  */
 public class MainMenu {
+    //bunu yazan tosun okuyana kosun
     
 }
