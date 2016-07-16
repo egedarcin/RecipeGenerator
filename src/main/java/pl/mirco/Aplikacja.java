@@ -28,13 +28,13 @@ public class Aplikacja {
         Fridge fridge = new Fridge();
 
         User user1 = new User();
-        user1.setUsername("Adam");
-        user1.setPassword("Kowaliski");
+        user1.setUsername("Ege");
+        user1.setPassword("Darcin");
         user1.setFridge(fridge);
 
 //		 saving objects to session
         UserManager.saveUser(user1);
 
-        System.out.print(UserManager.getAllUsers().get(9).getFridge().getId());
+        System.out.print(UserManager.getAllUsers());
     }
 }
