@@ -56,7 +56,8 @@ public class Fridge {
     public void setItems(List<FridgeItem> items) {
         this.items = items;
     }
+    public void addItem(FridgeItem item){
+        items.add(item);
+    }
     
-    
-   
 }

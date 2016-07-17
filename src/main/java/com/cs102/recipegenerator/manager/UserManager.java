@@ -8,11 +8,7 @@ package com.cs102.recipegenerator.manager;
 import com.cs102.recipegenerator.domain.User;
 import java.util.List;
 import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.hibernate.cfg.Configuration;
 import org.hibernate.criterion.Restrictions;
-import org.hibernate.service.ServiceRegistry;
-import org.hibernate.service.ServiceRegistryBuilder;
 
 /**
  * Amazon aws 
@@ -23,17 +19,7 @@ import org.hibernate.service.ServiceRegistryBuilder;
 public class UserManager {
 
     public static void saveUser(User user) {
-        Configuration configuration = new Configuration();
-        configuration.configure();
-
-        ServiceRegistry sr = new ServiceRegistryBuilder().applySettings(
-                configuration.getProperties()).buildServiceRegistry();
-        SessionFactory sf = configuration.buildSessionFactory(sr);
-
-        Session ss = sf.openSession();
-
-        ss.beginTransaction();
-
+        Session ss = SessionManager.getSession();
         ss.save(user);
         ss.getTransaction().commit();
         ss.close();
@@ -41,14 +27,9 @@ public class UserManager {
     }
 
     public static User getUserByUserName(String username) {
-        Configuration configuration = new Configuration();
-        configuration.configure();
+        
 
-        ServiceRegistry sr = new ServiceRegistryBuilder().applySettings(
-                configuration.getProperties()).buildServiceRegistry();
-        SessionFactory sf = configuration.buildSessionFactory(sr);
-
-        Session ss = sf.openSession();
+        Session ss = SessionManager.getSession();
 
         User user = (User) ss.createCriteria(User.class)
                 .add(Restrictions.eq("username", username)).uniqueResult();
@@ -58,22 +39,11 @@ public class UserManager {
         return user;
 
     }
-    
-    
     public static List<User> getAllUsers() {
-        Configuration configuration = new Configuration();
-        configuration.configure();
-
-        ServiceRegistry sr = new ServiceRegistryBuilder().applySettings(
-                configuration.getProperties()).buildServiceRegistry();
-        SessionFactory sf = configuration.buildSessionFactory(sr);
-
-        Session ss = sf.openSession();
-
+    
+        Session ss = SessionManager.getSession();
         List users = ss.createCriteria(User.class).list();
-
         ss.close();
-
         return users;
 
     }

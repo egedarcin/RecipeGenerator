@@ -8,6 +8,7 @@ package com.cs102.recipegenerator.domain;
 import java.io.Serializable;
 import java.util.List;
 import javax.persistence.CascadeType;
+import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -35,6 +36,7 @@ public class Recipe implements Serializable {
 
     private int cuisine;
     
+    @ElementCollection
     private List<String> steps;
 
     

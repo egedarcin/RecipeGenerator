@@ -5,6 +5,8 @@
  */
 package com.cs102.recipegenerator.domain;
 
+import java.io.Serializable;
+import java.util.List;
 import javax.persistence.Basic;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -13,16 +15,17 @@ import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Transient;
 
 /**
  *
- * @author egedarcho, umutakos, senaxi, ttabar, cntysz
+ * @author egedarcho, umutakos, senaxi, cntysz
  * 
  */
 @Entity
-public class User {
+public class User implements Serializable {
     
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -31,6 +34,9 @@ public class User {
     private String username;
     
     private String password;
+    
+    @OneToMany(cascade = CascadeType.ALL)
+    private List<Recipe> LastRecipes;
     
     @OneToOne(cascade = CascadeType.ALL,fetch = FetchType.EAGER)
     private Fridge fridge;
@@ -66,7 +72,16 @@ public class User {
     public void setFridge(Fridge fridge) {
         this.fridge = fridge;
     }
-    
+   public List<Recipe> getLastRecipes() {
+        return LastRecipes;
+    }
+
+    public void setLastRecipes(List<Recipe> LastRecipes) {
+        this.LastRecipes = LastRecipes;
+    }
+    public void addLastRecipe(Recipe LastRecipe){
+        LastRecipes.add(LastRecipe);
+    }
     
     
 }
