@@ -5,19 +5,21 @@
  */
 package com.cs102.recipegenerator.manager;
 
-import com.cs102.recipegenerator.domain.Fridge;
+import com.cs102.recipegenerator.domain.FridgeItem;
+import com.cs102.recipegenerator.domain.User;
 import java.util.List;
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.hibernate.cfg.Configuration;
-import org.hibernate.criterion.Restrictions;
-import org.hibernate.service.ServiceRegistry;
-import org.hibernate.service.ServiceRegistryBuilder;
-/**
+/*
  *
  * @author egedarcho
  */
 //buikisi geldiasd
 public class FridgeManager {
     
+
+  public List<FridgeItem> getItemsForUser(String username ){
+    User user = UserManager.getUserByUserName(username);
+    return user.getFridge().getItems();
+  } 
+  
+       
 }
