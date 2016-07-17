@@ -12,7 +12,7 @@ import org.hibernate.criterion.Restrictions;
  * @author egedarcho
  */
 public class RecipeManager {
-        public static Recipe getRecipeByRecipeName(String recipeName) {
+        public static Recipe getRecipeByName(String recipeName) {
 
 
         Session ss = SessionManager.getSession();
