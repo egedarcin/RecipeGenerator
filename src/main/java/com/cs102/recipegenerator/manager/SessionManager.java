@@ -25,7 +25,7 @@ public class SessionManager {
         SessionFactory sf = configuration.buildSessionFactory(sr);
 
         Session ss = sf.openSession();
-
+        ss.beginTransaction();
         return ss;
 
     }
