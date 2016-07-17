@@ -5,6 +5,7 @@
  */
 package com.cs102.recipegenerator.domain;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.CascadeType;
@@ -20,7 +21,7 @@ import javax.persistence.OneToOne;
  * @author egedarcho
  */
 @Entity
-public class Fridge {
+public class Fridge implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
