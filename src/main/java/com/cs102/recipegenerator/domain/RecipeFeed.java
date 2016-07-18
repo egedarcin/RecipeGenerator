@@ -29,6 +29,15 @@ public class RecipeFeed implements Serializable {
     
     private Date cookDate;
     
+    private Recipe recipe;
+    
+    public RecipeFeed (User user, Date cookDate, Recipe recipe) {
+     this.user= user;
+     this.cookDate = cookDate;
+     this.recipe = recipe;
+     
+}
+    
     public Long getId() {
         return id;
     }
@@ -53,5 +62,10 @@ public class RecipeFeed implements Serializable {
         this.cookDate = cookDate;
     }
     
-    
+    public Recipe getRecipe(){
+        return recipe;
+    }
+    public void setRecipe(Recipe recipe){
+        this.recipe = recipe;
+    }
 }
