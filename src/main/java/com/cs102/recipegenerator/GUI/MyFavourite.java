@@ -1,9 +1,29 @@
-public class MainMenu extends javax.swing.JFrame {
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package com.cs102.recipegenerator.GUI;
+
+/**
+ *
+ * @author Can Tüysüz
+ */
+public class MyFavourite extends javax.swing.JFrame {
     
     /**
      * Creates new form ContactEditor
      */
-    public MainMenu() {
+    
+    int count=0;
+    int chicken=0;
+    int lettuce=0;
+    int tomato=0;
+    int carrot=0;
+    int cucumber=0;
+    int zucchini=0;
+    int eggplant=0;
+    public MyFavourite() {
         initComponents();
     }
     
@@ -39,8 +59,15 @@ public class MainMenu extends javax.swing.JFrame {
         filler2 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 32767));
         filler1 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 32767));
         filler3 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 32767));
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        jButton6 = new javax.swing.JButton();
+        jButton7 = new javax.swing.JButton();
+        jButton8 = new javax.swing.JButton();
+        jButton9 = new javax.swing.JButton();
+        jButton10 = new javax.swing.JButton();
+        jButton11 = new javax.swing.JButton();
+        jButton12 = new javax.swing.JButton();
+        jButton13 = new javax.swing.JButton();
+        jButton14 = new javax.swing.JButton();
 
         jMenu1.setText("jMenu1");
 
@@ -75,11 +102,6 @@ public class MainMenu extends javax.swing.JFrame {
 
         jButton1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jButton1.setText("My Favourite");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
 
         jButton2.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jButton2.setText("My Fridge");
@@ -134,7 +156,7 @@ public class MainMenu extends javax.swing.JFrame {
                 .add(jSeparator4, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 10, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                 .add(8, 8, 8)
                 .add(jButton5, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 44, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .add(0, 0, Short.MAX_VALUE))
+                .add(0, 178, Short.MAX_VALUE))
         );
 
         jPanel7.setBackground(new java.awt.Color(102, 255, 51));
@@ -196,12 +218,113 @@ public class MainMenu extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jTextArea1.setForeground(new java.awt.Color(102, 102, 102));
-        jTextArea1.setRows(5);
-        jTextArea1.setText("- Click \"My Fridge\" to check ingredients!\n\n- Check your favourite recipes by clicking \"My Favourite\".\n\n- Click \"Explore\" to discover new!\n\n- Click \"Last Recipe\" to look to the past recipes.\n\n- Upload and edit your own recipes.\n\n- Search from recipes...");
-        jScrollPane1.setViewportView(jTextArea1);
+        jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/onion.png"))); // NOI18N
+        jButton6.setText("Onion: 0");
+        jButton6.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+        jButton6.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jButton6.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jButton6.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jButton6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton6MouseClicked(evt);
+            }
+        });
+
+        jButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/lettuce.png"))); // NOI18N
+        jButton7.setText("Lettuce: 0");
+        jButton7.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+        jButton7.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jButton7.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jButton7.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jButton7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton7MouseClicked(evt);
+            }
+        });
+
+        jButton8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/tomato.png"))); // NOI18N
+        jButton8.setText("Tomato: 0");
+        jButton8.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+        jButton8.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jButton8.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jButton8.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jButton8.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton8MouseClicked(evt);
+            }
+        });
+
+        jButton9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/zucchini.png"))); // NOI18N
+        jButton9.setText("Zucchini: 0");
+        jButton9.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+        jButton9.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jButton9.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jButton9.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jButton9.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton9MouseClicked(evt);
+            }
+        });
+
+        jButton10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/carrot.png"))); // NOI18N
+        jButton10.setText("Carrot: 0");
+        jButton10.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+        jButton10.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jButton10.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jButton10.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jButton10.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton10MouseClicked(evt);
+            }
+        });
+
+        jButton11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/eggplant.png"))); // NOI18N
+        jButton11.setText("Eggplant: 0");
+        jButton11.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+        jButton11.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jButton11.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jButton11.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jButton11.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton11MouseClicked(evt);
+            }
+        });
+
+        jButton12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/cucumber.png"))); // NOI18N
+        jButton12.setText("Cucumber: 0");
+        jButton12.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+        jButton12.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jButton12.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jButton12.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jButton12.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton12MouseClicked(evt);
+            }
+        });
+
+        jButton13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/plus.png"))); // NOI18N
+        jButton13.setText("Add ingredient");
+        jButton13.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+        jButton13.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jButton13.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jButton13.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jButton13.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton13MouseClicked(evt);
+            }
+        });
+
+        jButton14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/chicken.png"))); // NOI18N
+        jButton14.setText("Chicken: 0");
+        jButton14.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+        jButton14.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jButton14.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jButton14.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jButton14.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton14MouseClicked(evt);
+            }
+        });
 
         org.jdesktop.layout.GroupLayout jPanel3Layout = new org.jdesktop.layout.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -213,21 +336,39 @@ public class MainMenu extends javax.swing.JFrame {
                 .add(jPanel3Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                     .add(jPanel3Layout.createSequentialGroup()
                         .add(filler2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .add(jPanel10, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                        .add(85, 85, 85))
                     .add(jPanel3Layout.createSequentialGroup()
-                        .add(jPanel3Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                            .add(jPanel3Layout.createSequentialGroup()
-                                .add(jSeparator5, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 62, Short.MAX_VALUE)
-                                .add(filler1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                            .add(jPanel3Layout.createSequentialGroup()
-                                .add(0, 0, Short.MAX_VALUE)
-                                .add(filler3, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
-                        .add(64, 64, 64)))
-                .add(jPanel3Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(jPanel10, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(jScrollPane1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 472, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                .add(74, 74, 74)
+                        .add(jSeparator5, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .add(jPanel3Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
+                            .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanel3Layout.createSequentialGroup()
+                                .add(jPanel3Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                                    .add(org.jdesktop.layout.GroupLayout.TRAILING, filler1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                                    .add(org.jdesktop.layout.GroupLayout.TRAILING, filler3, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                                .add(610, 610, 610))
+                            .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanel3Layout.createSequentialGroup()
+                                .add(77, 77, 77)
+                                .add(jPanel3Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                                    .add(jButton6)
+                                    .add(jButton7)
+                                    .add(jButton9))
+                                .add(61, 61, 61)
+                                .add(jPanel3Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
+                                    .add(jButton10, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .add(jButton11, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .add(jButton14, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .add(jPanel3Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                                    .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanel3Layout.createSequentialGroup()
+                                        .add(jButton8)
+                                        .add(26, 26, 26))
+                                    .add(jPanel3Layout.createSequentialGroup()
+                                        .add(jPanel3Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                                            .add(jButton12)
+                                            .add(jButton13))
+                                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)))))))
                 .add(jPanel7, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
         );
         jPanel3Layout.setVerticalGroup(
@@ -239,21 +380,34 @@ public class MainMenu extends javax.swing.JFrame {
                         .add(60, 60, 60)
                         .add(filler2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
                 .add(jPanel3Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanel3Layout.createSequentialGroup()
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .add(jScrollPane1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 335, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .add(166, 166, 166))
                     .add(jPanel3Layout.createSequentialGroup()
                         .add(3, 3, 3)
+                        .add(jSeparator5))
+                    .add(jPanel3Layout.createSequentialGroup()
                         .add(jPanel3Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                             .add(jPanel3Layout.createSequentialGroup()
-                                .add(499, 499, 499)
-                                .add(filler3, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                                .add(100, 100, 100)
-                                .add(filler1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                                .add(0, 0, Short.MAX_VALUE))
-                            .add(jSeparator5))
-                        .addContainerGap())))
+                                .add(16, 16, 16)
+                                .add(filler3, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                            .add(jPanel3Layout.createSequentialGroup()
+                                .add(42, 42, 42)
+                                .add(jPanel3Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
+                                    .add(jButton7, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .add(jButton8, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .add(jButton14, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .add(18, 18, 18)
+                                .add(jPanel3Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                                    .add(jButton6)
+                                    .add(jButton10)
+                                    .add(jButton12))
+                                .add(18, 18, 18)
+                                .add(jPanel3Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                                    .add(jButton9)
+                                    .add(jButton11)
+                                    .add(jButton13))
+                                .add(83, 83, 83)
+                                .add(filler1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
+                        .add(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
             .add(jPanel7, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .add(jPanel6, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
@@ -264,7 +418,7 @@ public class MainMenu extends javax.swing.JFrame {
             layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(layout.createSequentialGroup()
                 .add(jPanel3, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .add(0, 0, Short.MAX_VALUE))
+                .add(0, 37, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
@@ -274,12 +428,50 @@ public class MainMenu extends javax.swing.JFrame {
         pack();
     }// </editor-fold>                        
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {                                         
-        
-        MyFavourite frm = new MyFavourite();
-        frm.setVisible(true);
-        this.hide();
-    }                                        
+    private void jButton6MouseClicked(java.awt.event.MouseEvent evt) {                                      
+        // TODO add your handling code here:
+        count++;
+        jButton6.setText("Onion: "+count);
+    }                                     
+
+    private void jButton7MouseClicked(java.awt.event.MouseEvent evt) {                                      
+        lettuce++;
+        jButton7.setText("Lettuce: "+lettuce);
+    }                                     
+
+    private void jButton8MouseClicked(java.awt.event.MouseEvent evt) {                                      
+        tomato++;
+        jButton8.setText("Tomato: "+tomato);
+    }                                     
+
+    private void jButton9MouseClicked(java.awt.event.MouseEvent evt) {                                      
+        zucchini++;
+        jButton9.setText("Zucchini: "+zucchini);
+    }                                     
+
+    private void jButton10MouseClicked(java.awt.event.MouseEvent evt) {                                       
+        carrot++;
+        jButton10.setText("Carrot: "+carrot);
+    }                                      
+
+    private void jButton11MouseClicked(java.awt.event.MouseEvent evt) {                                       
+        eggplant++;
+        jButton11.setText("Eggplant: "+eggplant);
+    }                                      
+
+    private void jButton12MouseClicked(java.awt.event.MouseEvent evt) {                                       
+        cucumber++;
+        jButton12.setText("Cucumber: "+cucumber);
+    }                                      
+
+    private void jButton13MouseClicked(java.awt.event.MouseEvent evt) {                                       
+        // TODO add your handling code here:
+    }                                      
+
+    private void jButton14MouseClicked(java.awt.event.MouseEvent evt) {                                       
+        chicken++;
+        jButton14.setText("Chicken: " + chicken);
+    }                                      
     
     /**
      * @param args the command line arguments
@@ -298,21 +490,23 @@ public class MainMenu extends javax.swing.JFrame {
                     break;
                 }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(MainMenu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MyFavourite.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(MainMenu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MyFavourite.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(MainMenu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MyFavourite.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(MainMenu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MyFavourite.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new MainMenu().setVisible(true);
+                new MyFavourite().setVisible(true);
             }
         });
     }
@@ -323,10 +517,19 @@ public class MainMenu extends javax.swing.JFrame {
     private javax.swing.Box.Filler filler2;
     private javax.swing.Box.Filler filler3;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton10;
+    private javax.swing.JButton jButton11;
+    private javax.swing.JButton jButton12;
+    private javax.swing.JButton jButton13;
+    private javax.swing.JButton jButton14;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton6;
+    private javax.swing.JButton jButton7;
+    private javax.swing.JButton jButton8;
+    private javax.swing.JButton jButton9;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel4;
@@ -337,13 +540,11 @@ public class MainMenu extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
-    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
     private javax.swing.JSeparator jSeparator4;
     private javax.swing.JSeparator jSeparator5;
-    private javax.swing.JTextArea jTextArea1;
     // End of variables declaration                   
     
 }
