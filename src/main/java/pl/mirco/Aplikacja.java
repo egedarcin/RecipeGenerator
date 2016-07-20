@@ -5,6 +5,7 @@ import com.cs102.recipegenerator.domain.User;
 import com.cs102.recipegenerator.manager.UserManager;
 import com.cs102.recipegenerator.domain.FridgeItem;
 import com.cs102.recipegenerator.domain.Ingredient;
+import com.cs102.recipegenerator.manager.IngredientManager;
         
 import java.awt.EventQueue;
 import java.util.List;
@@ -27,20 +28,24 @@ public class Aplikacja {
      * Launch the application.
      */
     public static void main(String[] args) {
-        List<FridgeItem> items = {potato, zucchini, tomatoes, garlic};
+       List<Ingredient> allFridgeItems = IngredientManager.getAllIngredient();
+
+        User user = new User();
+        user.setUsername("Ege");
+        user.setPassword("Darcin");
         Fridge fridge = new Fridge();
-        
-        User user1 = new User();
-        user1.setUsername("Ege");
-        user1.setPassword("Darcin");
-        user1.setFridge(fridge);
-        fridge.setItems(items);
-        
+        user.setFridge(fridge);
+        fridge.setUser(user);
 
-//		 saving objects to session
-        UserManager.saveUser(user1);
-        
+        for (int index = 0; index < 5; index++) {
+            FridgeItem fridgeItem = new FridgeItem();
+            fridgeItem.setAmount(200);
+            fridgeItem.setIngredient(allFridgeItems.get(index));
+            fridge.addItem(fridgeItem);
+        }
 
+        UserManager.saveUser(user);
         System.out.print(UserManager.getAllUsers());
+
     }
 }

@@ -32,7 +32,7 @@ public class Fridge implements Serializable {
     private User user;
     
     @OneToMany(cascade = CascadeType.ALL)
-    private List<FridgeItem> items;
+    private List<FridgeItem> items = new ArrayList<FridgeItem>();
 
     public Long getId() {
         return id;

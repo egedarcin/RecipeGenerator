@@ -30,4 +30,11 @@ public class IngredientManager {
         ss.getTransaction().commit();
         ss.close();
       }
+      public static List<Ingredient> getAllIngredient() {
+        Session ss = SessionManager.getSession();
+        List ingredients = ss.createCriteria(Ingredient.class).list();
+        ss.close();
+        return ingredients;
+        
+    }
 }
