@@ -244,7 +244,6 @@ public class MyFridge extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/onion.png"))); // NOI18N
         jButton6.setText("Onion: 0");
         jButton6.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jButton6.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
