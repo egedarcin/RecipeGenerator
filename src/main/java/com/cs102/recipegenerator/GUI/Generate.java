@@ -1,4 +1,5 @@
 package com.cs102.recipegenerator.GUI;
+import com.cs102.recipegenerator.domain.*;
 public class Generate extends javax.swing.JFrame {
     
     /**
@@ -349,10 +350,11 @@ public class Generate extends javax.swing.JFrame {
                             .add(jLabel10)
                             .add(jLabel7, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 86, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))))
                 .add(18, 18, 18)
-                .add(jPanel1Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                    .add(jCheckBox8)
-                    .add(jCheckBox4)
-                    .add(jCheckBox7))
+                .add(jPanel1Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                    .add(org.jdesktop.layout.GroupLayout.TRAILING, jCheckBox4)
+                    .add(jPanel1Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                        .add(jCheckBox8)
+                        .add(jCheckBox7)))
                 .add(18, 18, 18)
                 .add(jPanel1Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                     .add(jPanel1Layout.createSequentialGroup()

@@ -244,7 +244,7 @@ public class MyFridge extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/onion.png"))); // NOI18N
+        jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/onion.png"))); // NOI18N
         jButton6.setText("Onion: 0");
         jButton6.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jButton6.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -256,7 +256,7 @@ public class MyFridge extends javax.swing.JFrame {
             }
         });
 
-        jButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/lettuce.png"))); // NOI18N
+        jButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/lettuce.png"))); // NOI18N
         jButton7.setText("Lettuce: 0");
         jButton7.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jButton7.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -268,7 +268,7 @@ public class MyFridge extends javax.swing.JFrame {
             }
         });
 
-        jButton8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/tomato.png"))); // NOI18N
+        jButton8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/tomato.png"))); // NOI18N
         jButton8.setText("Tomato: 0");
         jButton8.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jButton8.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -280,7 +280,7 @@ public class MyFridge extends javax.swing.JFrame {
             }
         });
 
-        jButton9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/zucchini.png"))); // NOI18N
+        jButton9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/zucchini.png"))); // NOI18N
         jButton9.setText("Zucchini: 0");
         jButton9.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jButton9.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -292,7 +292,7 @@ public class MyFridge extends javax.swing.JFrame {
             }
         });
 
-        jButton10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/carrot.png"))); // NOI18N
+        jButton10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/carrot.png"))); // NOI18N
         jButton10.setText("Carrot: 0");
         jButton10.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jButton10.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -304,7 +304,7 @@ public class MyFridge extends javax.swing.JFrame {
             }
         });
 
-        jButton11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/eggplant.png"))); // NOI18N
+        jButton11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/eggplant.png"))); // NOI18N
         jButton11.setText("Eggplant: 0");
         jButton11.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jButton11.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -316,7 +316,7 @@ public class MyFridge extends javax.swing.JFrame {
             }
         });
 
-        jButton12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/cucumber.png"))); // NOI18N
+        jButton12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/cucumber.png"))); // NOI18N
         jButton12.setText("Cucumber: 0");
         jButton12.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jButton12.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -328,7 +328,7 @@ public class MyFridge extends javax.swing.JFrame {
             }
         });
 
-        jButton13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/plus.png"))); // NOI18N
+        jButton13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/plus.png"))); // NOI18N
         jButton13.setText("Add ingredient");
         jButton13.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jButton13.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -340,7 +340,7 @@ public class MyFridge extends javax.swing.JFrame {
             }
         });
 
-        jButton14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/chicken.png"))); // NOI18N
+        jButton14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/chicken.png"))); // NOI18N
         jButton14.setText("Chicken: 0");
         jButton14.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jButton14.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -432,7 +432,7 @@ public class MyFridge extends javax.swing.JFrame {
                                     .add(jButton13))
                                 .add(83, 83, 83)
                                 .add(filler1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
-                        .add(0, 172, Short.MAX_VALUE)))
+                        .add(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
             .add(jPanel7, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .add(jPanel6, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)

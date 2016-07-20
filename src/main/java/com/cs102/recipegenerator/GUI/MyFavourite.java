@@ -1,4 +1,5 @@
 package com.cs102.recipegenerator.GUI;
+import com.cs102.recipegenerator.domain.*;
 public class MyFavourite extends javax.swing.JFrame {
     
     /**
