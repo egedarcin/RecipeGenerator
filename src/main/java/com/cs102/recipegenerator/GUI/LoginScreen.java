@@ -1,4 +1,5 @@
 package com.cs102.recipegenerator.GUI;
+
 import javax.swing.JFrame;
 
 public class LoginScreen extends javax.swing.JFrame {

@@ -340,8 +340,8 @@ public class MainMenu extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton6MouseClicked
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
-        MyFavourite frm1 = new MyFavourite();
-        frm1.setVisible(true);
+        MyFavourite frm4 = new MyFavourite();
+        frm4.setVisible(true);
         this.hide();
     }//GEN-LAST:event_jButton1MouseClicked
 

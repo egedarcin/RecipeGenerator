@@ -35,8 +35,12 @@ public class User implements Serializable {
     
     private String password;
     
-    @OneToMany(cascade = CascadeType.ALL)
+    @OneToOne
     private List<Recipe> LastRecipes;
+    
+    @OneToOne
+    private List<Recipe> FavouriteRecipes;
+   
     
     @OneToOne(cascade = CascadeType.ALL,fetch = FetchType.EAGER)
     private Fridge fridge;
