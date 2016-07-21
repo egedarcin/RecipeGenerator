@@ -35,11 +35,12 @@ public class User implements Serializable {
     
     private String password;
     
-    @OneToOne
+   
+    @OneToMany
     private List<Recipe> LastRecipes;
     
-    @OneToOne
-    private List<Recipe> FavouriteRecipes;
+//    @OneToOne
+//    private List<Recipe> FavouriteRecipes;
    
     
     @OneToOne(cascade = CascadeType.ALL,fetch = FetchType.EAGER)

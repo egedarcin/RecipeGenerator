@@ -1,4 +1,4 @@
-package pl.mirco;
+package test;
 
 import com.cs102.recipegenerator.domain.Fridge;
 import com.cs102.recipegenerator.domain.User;
@@ -7,20 +7,13 @@ import com.cs102.recipegenerator.domain.FridgeItem;
 import com.cs102.recipegenerator.domain.Ingredient;
 import com.cs102.recipegenerator.manager.IngredientManager;
         
-import java.awt.EventQueue;
+
 import java.util.List;
 
 import javax.swing.JFrame;
 
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.hibernate.cfg.Configuration;
-import org.hibernate.service.ServiceRegistry;
-import org.hibernate.service.ServiceRegistryBuilder;
 
-import pl.mirco.model.Person;
-
-public class Aplikacja {
+public class testStuff {
 
     private JFrame frame;
 

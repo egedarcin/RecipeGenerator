@@ -4,7 +4,6 @@
  * and open the template in the editor.
  */
 package com.cs102.recipegenerator.manager;
-import java.util.List;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;

@@ -12,6 +12,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+import javax.persistence.Temporal;
 
 /**
  *
@@ -27,13 +28,15 @@ public class RecipeFeed implements Serializable {
     @ManyToOne
     private User user;
     
+    @Temporal(javax.persistence.TemporalType.DATE)
     private Date cookDate;
     
+    @ManyToOne
     private Recipe recipe;
     
-    public RecipeFeed (User user, Date cookDate, Recipe recipe) {
+    public RecipeFeed (User user, Recipe recipe) {
      this.user= user;
-     this.cookDate = cookDate;
+     this.cookDate = new Date();
      this.recipe = recipe;
      
 }

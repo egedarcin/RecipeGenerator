@@ -41,6 +41,7 @@ public class Recipe implements Serializable {
 
     
 
+    
     @OneToMany(cascade = CascadeType.ALL)
     private List<RecipeNeed> needs;
 

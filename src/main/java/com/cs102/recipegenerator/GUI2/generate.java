@@ -1,6 +1,11 @@
 package com.cs102.recipegenerator.GUI2;
 import java.awt.*;
 import java.awt.event.*;
+import java.awt.image.BufferedImage;
+import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URL;
+import javax.imageio.ImageIO;
 
 import javax.swing.*;
 import javax.swing.event.*;
@@ -10,7 +15,7 @@ public class generate extends JPanel {
     private JPanel jcomp4;
     private JPanel jcomp2;
 
-    public generate() {
+    public generate() throws MalformedURLException, IOException {
         //construct components
         jcomp1 = new JPanel ();
         jcomp4 = new JPanel (new GridLayout(3, 1));
@@ -18,8 +23,9 @@ public class generate extends JPanel {
         
         System.out.println("Yay you clicked me");
     	JLabel lbl;
-    	
-    	ImageIcon image = new ImageIcon(new ImageIcon("C:/bacon.jpg").getImage().getScaledInstance(55, 55, Image.SCALE_DEFAULT));
+    	URL url = new URL("https://s3.eu-central-1.amazonaws.com/cs102recipegenerator/ingredients/bacon.png");
+        BufferedImage c = ImageIO.read(url);
+        ImageIcon image = new ImageIcon(c.getScaledInstance(55, 55, Image.SCALE_DEFAULT));
     	for(int i =0;i < 20;i++){
     		lbl = new JLabel(image);
     		lbl.addMouseListener(new MouseAdapter() {
@@ -83,7 +89,7 @@ public class generate extends JPanel {
     }
 
 
-    public static void main (String[] args) {
+    public static void main (String[] args) throws IOException {
         JFrame frame = new JFrame ("MyPanel");
         frame.setDefaultCloseOperation (JFrame.EXIT_ON_CLOSE);
         frame.getContentPane().add (new generate());
