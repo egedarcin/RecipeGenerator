@@ -1,5 +1,4 @@
-
-
+package com.cs102.recipegenerator.GUI2;
 import java.awt.*;
 import java.awt.event.*;
 

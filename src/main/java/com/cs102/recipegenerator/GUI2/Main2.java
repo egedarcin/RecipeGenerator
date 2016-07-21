@@ -1,3 +1,4 @@
+package com.cs102.recipegenerator.GUI2;
 import java.awt.BorderLayout;
 import java.awt.Dimension;
 import java.awt.GridBagConstraints;
