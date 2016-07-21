@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.cs102.recipegenerator.domain;
 
 import java.io.Serializable;
@@ -14,10 +9,6 @@ import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 
-/**
- *
- * @author egedarcho
- */
 @Entity
 public class RecipeFeed implements Serializable {
 
@@ -27,20 +18,19 @@ public class RecipeFeed implements Serializable {
 
     @ManyToOne
     private User user;
-    
+
     @Temporal(javax.persistence.TemporalType.DATE)
     private Date cookDate;
-    
+
     @ManyToOne
     private Recipe recipe;
-    
-    public RecipeFeed (User user, Recipe recipe) {
-     this.user= user;
-     this.cookDate = new Date();
-     this.recipe = recipe;
-     
-}
-    
+
+    public RecipeFeed(User user, Recipe recipe) {
+        this.user = user;
+        this.cookDate = new Date();
+        this.recipe = recipe;
+    }
+
     public Long getId() {
         return id;
     }
@@ -64,11 +54,15 @@ public class RecipeFeed implements Serializable {
     public void setCookDate(Date cookDate) {
         this.cookDate = cookDate;
     }
-    
-    public Recipe getRecipe(){
+
+    public Recipe getRecipe() {
         return recipe;
     }
-    public void setRecipe(Recipe recipe){
+
+    public void setRecipe(Recipe recipe) {
         this.recipe = recipe;
+    }
+
+    public RecipeFeed(User user, Date cookDate, Recipe recipe) {
     }
 }

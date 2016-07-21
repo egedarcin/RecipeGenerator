@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.cs102.recipegenerator.domain;
 
 import java.io.Serializable;
@@ -15,17 +10,15 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
-/**
- *
- * @author egedarcho
- */
 @Entity
 public class Recipe implements Serializable {
 
     private final String IMAGE_URL = "https://s3.eu-central-1.amazonaws.com/cs102recipegenerator/recipes/";
 
     private final int ITALIAN = 0;
+
     private final int TURKISH = 1;
+
     private final int FRENCH = 2;
 
     @Id
@@ -35,13 +28,10 @@ public class Recipe implements Serializable {
     private String name;
 
     private int cuisine;
-    
+
     @ElementCollection
     private List<String> steps;
 
-    
-
-    
     @OneToMany(cascade = CascadeType.ALL)
     private List<RecipeNeed> needs;
 
@@ -80,9 +70,8 @@ public class Recipe implements Serializable {
     public List<RecipeNeed> getNeeds() {
         return needs;
     }
+
     public List<String> getSteps() {
         return steps;
     }
-
-    
 }

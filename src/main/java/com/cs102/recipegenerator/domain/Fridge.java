@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.cs102.recipegenerator.domain;
 
 import java.io.Serializable;
@@ -16,21 +11,16 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 
-/**
- *
- * @author egedarcho
- */
 @Entity
 public class Fridge implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    
-    
+
     @OneToOne(mappedBy = "fridge")
     private User user;
-    
+
     @OneToMany(cascade = CascadeType.ALL)
     private List<FridgeItem> items = new ArrayList<FridgeItem>();
 
@@ -57,8 +47,8 @@ public class Fridge implements Serializable {
     public void setItems(List<FridgeItem> items) {
         this.items = items;
     }
-    public void addItem(FridgeItem item){
+
+    public void addItem(FridgeItem item) {
         items.add(item);
     }
-    
 }

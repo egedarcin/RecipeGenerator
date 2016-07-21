@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.cs102.recipegenerator.domain;
 
 import java.io.Serializable;
@@ -19,31 +14,21 @@ import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Transient;
 
-/**
- *
- * @author egedarcho, umutakos, senaxi, cntysz
- * 
- */
 @Entity
 public class User implements Serializable {
-    
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    
+
     private String username;
-    
+
     private String password;
-    
-   
+
     @OneToMany
     private List<Recipe> LastRecipes;
-    
-//    @OneToOne
-//    private List<Recipe> FavouriteRecipes;
-   
-    
-    @OneToOne(cascade = CascadeType.ALL,fetch = FetchType.EAGER)
+
+    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private Fridge fridge;
 
     public Long getId() {
@@ -77,16 +62,16 @@ public class User implements Serializable {
     public void setFridge(Fridge fridge) {
         this.fridge = fridge;
     }
-   public List<Recipe> getLastRecipes() {
+
+    public List<Recipe> getLastRecipes() {
         return LastRecipes;
     }
 
     public void setLastRecipes(List<Recipe> LastRecipes) {
         this.LastRecipes = LastRecipes;
     }
-    public void addLastRecipe(Recipe LastRecipe){
+
+    public void addLastRecipe(Recipe LastRecipe) {
         LastRecipes.add(LastRecipe);
     }
-    
-    
 }
