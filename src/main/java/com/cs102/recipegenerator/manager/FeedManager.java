@@ -10,7 +10,7 @@ import org.hibernate.Session;
 import org.hibernate.criterion.Order;
 /**
  *
- * @author egedarcho
+ * @author egedarcho, umutakos, cantuysuz, senaxi
  */
 
 public class FeedManager {
