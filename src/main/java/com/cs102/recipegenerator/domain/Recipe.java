@@ -1,6 +1,7 @@
 package com.cs102.recipegenerator.domain;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.ElementCollection;
@@ -9,17 +10,21 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+import javax.persistence.Transient;
 
 @Entity
 public class Recipe implements Serializable {
-
+    @Transient
     private final String IMAGE_URL = "https://s3.eu-central-1.amazonaws.com/cs102recipegenerator/recipes/";
-
-    private final int ITALIAN = 0;
-
-    private final int TURKISH = 1;
-
-    private final int FRENCH = 2;
+    @Transient
+    public static final int ITALIAN = 0;
+    @Transient
+    public static final int TURKISH = 1;
+    @Transient
+    public static final int FRENCH = 2;
+    @Transient
+    public static final int AMERICAN = 3;
+    
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -30,10 +35,11 @@ public class Recipe implements Serializable {
     private int cuisine;
 
     @ElementCollection
-    private List<String> steps;
+    private List<String> steps = new ArrayList<String>();
 
     @OneToMany(cascade = CascadeType.ALL)
-    private List<RecipeNeed> needs;
+    private List<RecipeNeed> needs = new ArrayList<RecipeNeed>(); 
+
 
     public String getImageUrl() {
         return IMAGE_URL + name + ".png";
@@ -66,6 +72,9 @@ public class Recipe implements Serializable {
     public int getCuisine() {
         return cuisine;
     }
+    public void setCuisine(int c){
+        this.cuisine = c;
+    }
 
     public List<RecipeNeed> getNeeds() {
         return needs;
@@ -74,4 +83,17 @@ public class Recipe implements Serializable {
     public List<String> getSteps() {
         return steps;
     }
+    public void setSteps(List<String> steps){
+        this.steps = steps;
+    }
+   
+    public void addNeeds(RecipeNeed need){
+        needs.add(need);
+    }
+    
+    public void addSteps(String step){
+        steps.add(step);
+    }
+            
+    
 }

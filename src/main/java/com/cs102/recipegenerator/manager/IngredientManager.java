@@ -4,6 +4,7 @@ import com.cs102.recipegenerator.domain.FridgeItem;
 import com.cs102.recipegenerator.domain.Ingredient;
 import java.util.List;
 import org.hibernate.Session;
+import org.hibernate.criterion.Restrictions;
 
 public class IngredientManager {
 
@@ -27,4 +28,12 @@ public class IngredientManager {
         ss.close();
         return ingredients;
     }
+    public static Ingredient findByName(String name) {
+    Session ss = SessionManager.getSession();
+      Ingredient ingredient = (Ingredient) ss.createCriteria(Ingredient.class)
+         .add(Restrictions.eq("name", name)).uniqueResult();
+       ss.close();
+     return ingredient;
+   }
+
 }
