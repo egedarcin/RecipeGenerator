@@ -22,9 +22,10 @@ public class FeedManager {
     }
     public static List<RecipeFeed> getLastRecipes(){
         Session ss = SessionManager.getSession();
-        List<RecipeFeed> orderedFeed =  ss.createCriteria(RecipeFeed.class).addOrder(Order.asc("cookDate")).setFetchSize(10).list();
+        List<RecipeFeed> orderedFeed = ss.createCriteria(RecipeFeed.class).addOrder(Order.asc("cookDate")).setFetchSize(10).list();
         ss.close();
         return orderedFeed;
     }
+}
             
 
