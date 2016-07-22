@@ -31,7 +31,7 @@ public class Open extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(255, 204, 51));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/lettuce people.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon("/Users/egedarcho/Documents/Bilkent/Semester 2/CS102/RecipeGeneratorSer/src/main/java/com/cs102/recipegenerator/GUI/Pictures/lettuce people.png")); // NOI18N
 
         jButton1.setText("SIGN UP");
         jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -83,7 +83,7 @@ public class Open extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(148, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());

@@ -24,42 +24,44 @@ public class testStuff {
      */
     public static void main(String[] args) {
        setSomethingstoRecipes();
+       
     }
 
     public static void setSomethingstoRecipes() {
         Recipe recipe = new Recipe();
-        recipe.setName("TheSuperPotato");
-        recipe.setCuisine(Recipe.AMERICAN);
-        recipe.addSteps("1. Preheat the oven to 220 degrees Celcius.");
-        recipe.addSteps("2. Pierce the potatoes several times with a fork. Place in the oven and bake for 1 hour, or until tender when pierced with a fork. Remove and leave the oven on. ");
-        recipe.addSteps("3. Meanwhile, in a small saucepan, combine the flour, and a pinch of salt. Gradually whisk in 1 cup of the milk until the flour dissolves. Cook, stirring, over medium heat for 5 minutes, or until thickened. Remove from the heat. Stir in the cheese until smooth. Set aside.");
-        recipe.addSteps("4. Holding the potatoes with an oven mitt, cut in half lengthwise. Scoop the flesh out into a bowl, leaving a ¼\" shell. Place the shells on a baking sheet. Mash the flesh with a potato masher.");
-        recipe.addSteps("5. Stir in the remaining 2/3 cup milk and 1/4 teaspoon salt until smooth. Spoon the potato mixture into the shells. Top with the broccoli, bacon, and cheese sauce. Bake for 10 minutes, or until heated through.");
+        recipe.setName("ZucchiniFritters");
+        recipe.setCuisine(Recipe.TURKISH);
+        recipe.addSteps("1.Place the  grated zucchini in a strainer over a large bowl. Toss it with salt and set aside for 1 hour. Squeeze in a clean kitchen towel to extract excess moisture.");
+        recipe.addSteps("2.Transfer to a bowl. First stir in herbs, onions and feta cheese . Add eggs and flour to the vegetables and mixed until evenly combined.");
+        recipe.addSteps("3. Heat vegetable oil in a large heavy-bottomed frying pan over medium- high heat. Meanwhile, line a large plate with paper towel  to drain excess oil.");
+        recipe.addSteps("4. Carefully drop a heaped tablespoon of zucchini mixture in to pan; repeat, spacing fritters a few inches apart. Pat them down  so they become like a flat.");
+        recipe.addSteps("5. Fry until golden brown on both sides. With a slotted spoon tranfer patties to the plate.");
+        recipe.addSteps("6.Serve  cold or at room temperature with sour cream.");
         
-        Ingredient potato = IngredientManager.findByName("potato");
+        Ingredient zucchini = IngredientManager.findByName("zucchini");
         RecipeNeed recipeNeed = new RecipeNeed();
-        recipeNeed.setAmount(4);
-        recipeNeed.setIngredient(potato);
+        recipeNeed.setAmount(3);
+        recipeNeed.setIngredient(zucchini);
         recipe.getNeeds().add(recipeNeed);
 
-        Ingredient milk = IngredientManager.findByName("milk");
+        Ingredient eggs = IngredientManager.findByName("eggs");
         recipeNeed = new RecipeNeed();
         recipeNeed.setAmount(3);
-        recipeNeed.setIngredient(milk);
+        recipeNeed.setIngredient(eggs);
         recipe.getNeeds().add(recipeNeed);
         RecipeManager.saveRecipe(recipe);
         
-        Ingredient bacon = IngredientManager.findByName("bacon");
+        Ingredient onions = IngredientManager.findByName("onions");
         recipeNeed = new RecipeNeed();
         recipeNeed.setAmount(3);
-        recipeNeed.setIngredient(bacon);
+        recipeNeed.setIngredient(onions);
         recipe.getNeeds().add(recipeNeed);
         RecipeManager.saveRecipe(recipe);
         
-        Ingredient broccoli = IngredientManager.findByName("broccoli");
+        Ingredient cheddar = IngredientManager.findByName("cheddar");
         recipeNeed = new RecipeNeed();
         recipeNeed.setAmount(10);
-        recipeNeed.setIngredient(broccoli);
+        recipeNeed.setIngredient(cheddar);
         recipe.getNeeds().add(recipeNeed);
         RecipeManager.saveRecipe(recipe);
         
@@ -77,7 +79,7 @@ public class testStuff {
 
         for (int index = 0; index < 5; index++) {
             FridgeItem fridgeItem = new FridgeItem();
-            fridgeItem.setAmount(200);
+            fridgeItem.setAmount(20);
             fridgeItem.setIngredient(allFridgeItems.get(index));
             fridge.addItem(fridgeItem);
         }

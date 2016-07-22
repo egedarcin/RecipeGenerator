@@ -8,12 +8,6 @@ import org.hibernate.criterion.Restrictions;
 
 public class IngredientManager {
 
-    public static List<FridgeItem> getAllFridgeItems() {
-        Session ss = SessionManager.getSession();
-        List fridgeItems = ss.createCriteria(FridgeItem.class).list();
-        ss.close();
-        return fridgeItems;
-    }
 
     public static void putIngredients(Ingredient ingredient) {
         Session ss = SessionManager.getSession();

@@ -1,6 +1,7 @@
 package com.cs102.recipegenerator.GUI;
 
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 
 public class LoginScreen extends javax.swing.JFrame {
     
@@ -144,9 +145,19 @@ public class LoginScreen extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
+       
+        if(jTextField1.getText().equals("ege") && (jPasswordField1.getPassword()[0]=='d')){
         MainMenu frm = new MainMenu();
         frm.setVisible(true);
         this.hide();
+        }
+        else{
+        JOptionPane.showMessageDialog(this,
+                "Invalid password. Try again.",
+                "Error Message",
+                JOptionPane.ERROR_MESSAGE);
+            System.out.println("You entered wrong username or password.");
+        }
     }//GEN-LAST:event_jButton1MouseClicked
 
     private void jPasswordField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordField1ActionPerformed

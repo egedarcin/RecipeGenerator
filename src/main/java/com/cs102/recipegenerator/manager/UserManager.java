@@ -15,6 +15,7 @@ public class UserManager {
     }
 
     public static User getUserByUserName(String username) {
+        
         Session ss = SessionManager.getSession();
         User user = (User) ss.createCriteria(User.class).add(Restrictions.eq("username", username)).uniqueResult();
         ss.close();
