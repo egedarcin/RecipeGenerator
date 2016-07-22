@@ -21,6 +21,7 @@
     <mapping class="com.cs102.recipegenerator.domain.RecipeFeed"/>
     <mapping class="com.cs102.recipegenerator.domain.Recipe"/>
     <mapping class="com.cs102.recipegenerator.domain.RecipeNeed"/>
+    
        
   </session-factory>
 </hibernate-configuration>

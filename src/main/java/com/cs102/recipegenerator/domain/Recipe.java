@@ -43,8 +43,8 @@ public class Recipe implements Serializable {
 
     private int cuisine;
 
-    @ManyToOne(fetch = FetchType.LAZY, targetEntity = Recipe.class)
-    public List<String> steps = new ArrayList<String>();
+    @ElementCollection(fetch = FetchType.EAGER)
+    private List<String> steps = new ArrayList<String>();
 
     @OneToMany(cascade = CascadeType.ALL)
     private List<RecipeNeed> needs = new ArrayList<RecipeNeed>();

@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.net.MalformedURLException;
 import java.awt.Image;
 import java.util.List;
+import javax.persistence.ManyToOne;
 import javax.swing.ImageIcon;
 
 public class MyRecipe extends javax.swing.JFrame {
@@ -274,10 +275,11 @@ public class MyRecipe extends javax.swing.JFrame {
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
         jScrollPane1.setViewportView(jTextArea1);
+        lst = RecipeManager.getRecipeByName("TheSuperPotato").getSteps();
         if(Explore.isFood)
-        lst = RecipeManager.getRecipeByName("TheSuperPotato").steps;
+        lst = RecipeManager.getRecipeByName("TheSuperPotato").getSteps();
         else
-        lst = RecipeManager.getRecipeByName("ZucchiniFritters").steps;
+        lst = RecipeManager.getRecipeByName("ZucchiniFritters").getSteps();
 
         for(int i = 0; i<lst.size();i++){
             jTextArea1.append(lst.get(i) + "\n");
