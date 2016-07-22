@@ -460,14 +460,14 @@ public class Explore extends javax.swing.JFrame  {
     private void jLabel6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel6MouseClicked
        MyRecipe frm8 = new MyRecipe();
         frm8.setVisible(true);
-        isFood = true;
+        isFood = false;
         this.hide();
     }//GEN-LAST:event_jLabel6MouseClicked
 
     private void jLabel7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7MouseClicked
         MyRecipe frm9 = new MyRecipe();
         frm9.setVisible(true);
-        isFood = false;
+        isFood = true;
         this.hide();
     }//GEN-LAST:event_jLabel7MouseClicked
     

@@ -63,6 +63,5 @@ public class RecipeFeed implements Serializable {
         this.recipe = recipe;
     }
 
-    public RecipeFeed(User user, Date cookDate, Recipe recipe) {
-    }
+    
 }
